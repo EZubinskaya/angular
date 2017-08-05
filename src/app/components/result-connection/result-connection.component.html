@@ -1,0 +1,75 @@
+<div id="isconnection">
+
+    <div class="common-block">
+        <label>Enable</label>
+        <input id="enable" type="checkbox" name="enable" />
+    </div>
+
+    <div class="common-block">
+
+        <form id="formRegex">
+            <div class="form-group">
+                <label for="classRegex">Enter variable owner the class regex</label>
+                <input type="text" class="form-control" id="classRegex"></input>
+            </div>
+            <div class="form-group">
+                <label for="typeRegex">Enter the type regex</label>
+                <input type="text" class="form-control" id="typeRegex"></input>
+            </div>
+            <div class="form-group">
+                <label for="nameRegex">Enter the name regex</label>
+                <input type="text" class="form-control" id="nameRegex"></input>
+            </div>
+            <div>
+                <button type="button" class="btn btn-default btn-xs" id="clearGegex">Clear fields</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-sm" id="submitRegex">Add trace parameters</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div>
+        <input class="btn btn-danger btn-sm" id="reset" type="button" value="Reset server trace parameters" />
+    </div>
+
+    <p><input class="btn btn-success btn-sm" type="button" id="tracer-condition" value="Show trace parameters" /></p>
+    <div class="tracer-condition-result">
+
+        <table class="table table-border table-hover">
+            <thead>
+                <tr class="active">
+                    <th>Variable owner class regex</th>
+                    <th>Type regex</th>
+                    <th>Name regex</th>
+                </tr>
+
+            </thead>
+            <tbody id="result-table-body">
+
+            </tbody>
+        </table>
+
+    </div>
+    <p><a class="btn btn-warning" href="result" target="_blank">Show trace results</a></p>
+
+    <div class="row" style="margin:0px; margin-top: 3em">
+        <div class="col-md-3" align="center" style="margin:0px">
+            <b>Call saving queue management:</b>
+        </div>
+    </div>
+    <div class="row" style="margin:0px">
+        <div class="col-md-2" style="padding:0.5em; margin:0px">
+            <div align="right" id="status">
+                Status not received yet
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div style="margin:0px" class="btn btn-danger" id="purge-btn">
+                Clear queue
+            </div>
+        </div>
+    </div>
+
+</div>

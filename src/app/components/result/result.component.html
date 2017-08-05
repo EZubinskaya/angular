@@ -1,0 +1,19 @@
+<div class="row" style="height:100vh;">
+    <div align="center">
+        <br/>
+        <form method="get" action="/result" id="search-form">
+            <input name="className" type="text" size="50" id="class-regex-search-box" />&nbsp;
+            <input type="submit" value="search" class="btn btn-xs btn-success" id="search-btn" />
+        </form>
+    </div>
+    <br/>
+    <div style="height: 92%">
+        <div class="scroll-screen col-md-6">
+            <div id="results-target"></div>
+            <div align="center">
+                <div class="btn btn-success" onclick="loadCalls()">Load more</div><br/>&nbsp;
+            </div>
+        </div>
+        <div class="scroll-screen col-md-6" id="info-target"></div>
+    </div>
+</div>

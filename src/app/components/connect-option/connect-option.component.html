@@ -1,0 +1,25 @@
+<div class="connect">
+    <label class="bg-info">Create Connection</label>
+    <select id="connection" [(ngModel)]="connectionType" (ngModelChange)="onChangeConnectionType(connectionType)">
+        <option value="0" checked="true" [ngValue]="0"> No Connection </option>
+        <option value="1" [ngValue]="1">Connect to Localhost </option>
+        <option value="2" [ngValue]="2">Manual connection</option>
+    </select>
+</div>
+
+<!-- *ngIf={{selectedManualConnection}} -->
+
+<div class="manual_connect" [hidden]='{{selectedManualConnection}}'>
+    <form id="manulConnection">
+        <label>host</label>
+        <input id="host" type="text" name="host" />
+
+        <label>port</label>
+        <input id="port" type="text" name="port" />
+
+        <label>path</label>
+        <input id="path" type="text" name="path" />
+
+        <input class="btn btn-info btn-sm" id="submitConnect" type="button" value="Connect" />
+    </form>
+</div>
