@@ -10,13 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class ConnectOptionComponent implements OnInit {
     constructor() { }
 
- selectedManualConnection:boolean = false;
+    selectedManualConnection: boolean = false;
 
-  onChangeConnectionType(connectionType) {
-      if(connectionType == 2){
-          this.selectedManualConnection = true;
-      }
-  }
- 
+    onChangeConnectionType(connectionType) {
+        if (connectionType == 2) {
+            this.selectedManualConnection = true;
+        } else {
+            this.selectedManualConnection = false;
+
+        }
+    }
+
     ngOnInit() { }
 }

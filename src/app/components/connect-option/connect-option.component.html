@@ -9,7 +9,7 @@
 
 <!-- *ngIf={{selectedManualConnection}} -->
 
-<div class="manual_connect" [hidden]='{{selectedManualConnection}}'>
+<div class="manual_connect" *ngIf='selectedManualConnection'>
     <form id="manulConnection">
         <label>host</label>
         <input id="host" type="text" name="host" />
