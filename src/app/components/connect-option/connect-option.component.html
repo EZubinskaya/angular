@@ -8,16 +8,17 @@
 <!-- *ngIf={{selectedManualConnection}} -->
 
 <div class="manual_connect" *ngIf="isManualConnection">
-    <form id="manulConnection">
+    <form id="manulConnection" (submit)="onConnect($event)">
         <label>host</label>
-        <input id="host" type="text" name="host" />
+        <input id="host" type="text" name="host" [(ngModel)]="connect.host" />
 
         <label>port</label>
-        <input id="port" type="text" name="port" />
+        <input id="port" type="text" name="port" [(ngModel)]="connect.port" />
 
         <label>path</label>
-        <input id="path" type="text" name="path" />
+        <input id="path" type="text" name="path" [(ngModel)]="connect.path" />
 
-        <input class="btn btn-info btn-sm" id="submitConnect" type="button" value="Connect" />
+        <!-- <input class="btn btn-info btn-sm" id="submitConnect" type="button" value="Connect" /> -->
+        <button type="submit">Connect</button>
     </form>
 </div>

@@ -1,5 +1,5 @@
-<div id="isconnection">
-
+<div id="isconnection" *ngIf="connect">
+<h1>{{connect.host}}</h1> <!-- TODO: REMOVE, just for test -->
     <div class="common-block">
         <label>Enable</label>
         <input id="enable" type="checkbox" name="enable" />

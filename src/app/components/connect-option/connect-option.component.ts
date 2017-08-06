@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Connect } from '../../shared/connect';
 
 @Component({
     selector: 'connect-option',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ConnectOptionComponent implements OnInit {
+    @Output() onConnectClick = new EventEmitter<Connect>();
+    connect: Connect = new Connect();
     selectedConnectionCode: number;
     isManualConnection: boolean = false;
     manualConnectionCode: number = 2;
@@ -19,6 +22,12 @@ export class ConnectOptionComponent implements OnInit {
 
     onChangeConnectionType(selectedConnectionCode) {
         this.isManualConnection = selectedConnectionCode == this.manualConnectionCode;
+        this.onConnectClick.emit(null);
+    }
+
+    onConnect(event: any){
+        this.onConnectClick.emit(this.connect);
+        event.preventDefault();
     }
 
     ngOnInit() {
