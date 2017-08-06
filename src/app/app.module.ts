@@ -6,8 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ConnectOptionComponent } from './components/connect-option/connect-option.component';
-//import { ResultConnectionComponent } from './components/result-connection/result-connection.component';
-//import { TraceInfoComponent } from './components/trace-info/trace-info.component';
+import { ResultConnectionComponent } from './components/result-connection/result-connection.component';
+import { TraceInfoComponent } from './components/trace-info/trace-info.component';
 import { ResultComponent } from './components/result/result.component';
 
 import { ApiService } from './shared';
@@ -26,8 +26,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AppComponent,
     HomeComponent,
     ConnectOptionComponent,
-    //ResultConnectionComponent,
-    //TraceInfoComponent,
+    ResultConnectionComponent,
+    TraceInfoComponent,
     ResultComponent
   ],
   providers: [
